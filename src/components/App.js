@@ -9,7 +9,7 @@ class App extends Component {
 
     return (
       <React.Fragment>
-        <div>value: { props.value }</div>
+        <div>value: { props.number }</div>
         <button onClick={ props.increment }>+1</button>
         <button onClick={ props.decrement }>-1</button>
       </React.Fragment>
@@ -17,7 +17,7 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => ({ value: state.count.value })
+const mapStateToProps = state => ({ number: state.count.number })
 const mapDispatchToProps = dispatch => ({ 
   increment: () => dispatch(increment()),
   decrement: () => dispatch(decrement())

@@ -1,14 +1,14 @@
 import { INCREMENT, DECREMENT } from '../actions'
 
-const initialState = { value: 0 }
+const initialState = { number: 0 }
 
-export default (state = initialState, actions) => {
+export default (counter = initialState, actions) => {
     switch (actions.type) {
         case INCREMENT:
-            return { value: state.value + 1 }
+            return { number: counter.number + 1 }
         case DECREMENT:
-            return { value: state.value - 1 }
+            return { number: counter.number - 1 }
         default:
-            return state
+            return counter
     }
 }
